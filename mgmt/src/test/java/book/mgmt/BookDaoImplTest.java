@@ -22,18 +22,11 @@ public class BookDaoImplTest extends TestCase {
 	    	//BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 	    	 i = (BookDao)appContext.getBean("BookDao");
 		Book input = new Book();
-		input.setBookId(1);
-		input.setBookName("java");
-		input.setAuthName("pojo");
+		//input.setBookId(1);
+		input.setBookName("python");
+		input.setAuthName("ijklm");
 		
 		input.setBookQuantity(1);
-		Book result=null;
-		try {
-			result = i.findByBook("java");
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		assertEquals(input.getBookId(),result.getBookId());
+	 	assertEquals(i.saveBook(input),true);
 	}
 }

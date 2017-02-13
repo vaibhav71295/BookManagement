@@ -7,7 +7,7 @@ public interface BookDao {
 	 * 
 	 * @param book
 	 */
-	void saveBook(Book book);
+	boolean saveBook(Book book);
 	
 	/**
 	 * @param book

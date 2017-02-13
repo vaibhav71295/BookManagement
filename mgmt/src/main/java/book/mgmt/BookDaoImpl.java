@@ -10,8 +10,9 @@ import org.springframework.stereotype.Repository;
 // import com.mkyong.util.CustomHibernateDaoSupport;
 public class BookDaoImpl extends CustomHibernateDaoSupport implements BookDao {
 
-	public void saveBook(Book book) {
+	public boolean saveBook(Book book) {
 		getHibernateTemplate().save(book);
+		return true;
 	}
 
 	public void updateBook(Book book) {
